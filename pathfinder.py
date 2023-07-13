@@ -29,11 +29,13 @@ class Node:
         self.total_rows = total_rows
 
     def get_position(self):
+        #Indexing things using row columns, starting with the row as x and col as Y
         return self.row, self.col
 
     def is_closed(self):
+        #Tells us it is a square that we have already looked at
         return self.color == RED
-        
+
 
 
 
