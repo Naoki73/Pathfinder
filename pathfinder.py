@@ -36,6 +36,10 @@ class Node:
         #Tells us it is a square that we have already looked at
         return self.color == RED
 
+    def is_open(self):
+        #Tells us if we're in the open square
+        return self.color == GREEN 
+
 
 
 
