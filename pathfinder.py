@@ -106,10 +106,10 @@ def algorithm(draw, grid, start, end):
     came_from = {}
     g_score = {spot: float("inf") for row in grid for spot in row} # g score keeps track of shortest distance from start node to end node
     g_score[start] = 0
-    f_score = {spot: float("inf") for row in grid for spot in row} #f score keeps track of predicted distance from start node to end noe
+    f_score = {spot: float("inf") for row in grid for spot in row} #f score keeps track of predicted distance from start node to end node
     f_score[start] = h(start.get_pos(), end.get_pos())
 
-    open_set_hash = {start}
+    open_set_hash = {start} #keeps tracking of items that are or are not in the priorityqueue 
 
     while not open_set.empty():
         #algorithm runs until open_set is empty. if path has not been found yet, path does not exist
