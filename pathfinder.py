@@ -28,7 +28,7 @@ class Node:
         self.width = width
         self.total_rows = total_rows
 
-    def get_position(self):
+    def get_pos(self):
         #Indexing things using row columns, starting with the row as x and col as Y
         return self.row, self.col
 
@@ -238,7 +238,7 @@ def main(win, width):
                 if event.key == pygame.K_SPACE and not started:
                     for row in grid:
                         for node in row:
-                            node.update_neighbors()
+                            node.update_neighbors(grid)
 
                     algorithm(lambda: draw(win, grid, ROWS, width), grid, start, end)
                     x = lambda: print("hello")
